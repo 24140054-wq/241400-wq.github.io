@@ -1,0 +1,404 @@
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Página Principal Interactiva</title>
+  <style>
+    :root{--accent:#d15353;--bg:#d15353;--card:#faead7;--glass:#ffa8a8}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial;color:#f3ebe6;background:linear-gradient(180deg,#fff5e9 0%, 100%);min-height:100vh}
+   header {
+    width: 100%;
+    background-color: #d15353; /* color rosado superior */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* Contenedor principal del brand */
+.brand {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d15353; /* color rosa más oscuro inferior */
+    padding: 5px 20px;
+}
+
+/* Logo centrado arriba */
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Textos del lado izquierdo */
+.brand > div div {
+    color: white;
+    background-color: #d15353;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+   
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+  
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:36px;padding:48px 32px;align-items:center;background-color:#faead7}
+    .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 12px;color:#001442}
+    .hero p{margin:0 0 18px;color:#022f6a;line-height:1.4}
+    .cta{display:flex;gap:10px}
+    .btn{background:var(--accent);color:rgb(255, 255, 255);padding:10px 16px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+    .btn.secondary{background:#d15353;border:1px solid #d15353;color:#ffffff}
+    .mock{background:#ffa8a8;border-radius:14px;padding:18px;border:1px solid #ffa8a8;box-shadow:0 8px 30px rgba(150, 0, 87, 0.653)}/* Features */
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:18px 32px}
+.card{background:#fad7ec;border-radius:12px;padding:18px;border:1px solid #fad7ec;transition:transform .25s ease,box-shadow .25s ease}
+.card:hover{transform:translateY(-8px);box-shadow:0 14px 40px rgba(150, 0, 87, 0.653)}
+.card h3{margin:0 0 8px;color:#001442}
+.card p{margin:0;color:#001442;font-size:14px}
+
+
+
+
+/* Carousel */
+.carousel{position:relative;overflow:hidden;border-radius:12px}
+.slides{display:flex;transition:transform .45s cubic-bezier(.22,.9,.32,1)}
+.slide{min-width:100%;padding:28px;display:flex;gap:18px;align-items:center}
+.slide img{width:110px;height:110px;border-radius:12px;object-fit:cover}
+.carousel .controls{position:absolute;left:12px;right:12px;top:50%;transform:translateY(-50%);display:flex;justify-content:space-between}
+.circle{background:var(--glass);padding:8px;border-radius:10px;border:1px solid #ffa8a8;cursor:pointer}
+
+
+
+
+/* Contact */
+footer{padding:40px 32px 80px;background-color:#faead7;}
+.contact{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start;color:#001237}
+form{display:flex;flex-direction:column;gap:12px;background:linear-gradient(180deg,#e76d6d,#e37676);padding:18px;border-radius:12px;border:1px solid #e37676}
+input,textarea{background:transparent;border:1px solid #c06060;padding:10px;border-radius:8px;color:#ff0707;resize:vertical}
+label{font-size:13px;color:#ffffff}
+.sent{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,#c60000,#ff0000);color:rgb(254, 0, 0);border:none;cursor:default}
+
+
+
+
+/* small screens */
+@media (max-width:880px){.hero{grid-template-columns:1fr;padding:28px 18px}.contact{grid-template-columns:1fr}.hero .mock{order:-1;margin-bottom:20px}}
+
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div>
+        <div class="logo"> <img src="C:\Users\Arlette\Pictures\Screenshots\Captura de pantalla 2025-10-26 150519.png" ></div>
+      </div>
+    </div>
+    <nav>
+        <nav>
+            <a href=" index_original.html">Inicio</a>
+            <a href="zonas.html">Zonas</a>
+            <a href="productos.html">Tienda</a>
+            <a href="logros.html">Logros</a>
+            <a href="campañas.html">Campañas</a>
+    </nav>
+  </header>  <main>
+    <section class="hero">
+      <div>
+        <h1>Una empresa que ayuda a los que mas lo necesitan</h1>
+        <p>Esta empresa contribuye al desarrollo y bienestar de comunidades de bajos recursos, impulsando oportunidades para un mejor futuro.</p>
+        <div class="cta">
+          <button class="btn" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">Ver características</button>
+          <button class="btn secondary" onclick="toggleTheme()">Alternar tema</button>
+        </div>
+      </div><div class="mock">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;color:#ffffff">
+      <strong>Nuestra Empresa</strong>
+      <small style="color:#ffffff">Contactate con nosotros</small>
+    </div>
+    <div style="display:flex;gap:12px;align-items:center">
+      <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,rgba(219, 43, 70, 0.9),#c32260);display:flex;align-items:center;justify-content:center;font-weight:700">UI</div>
+      <div>
+        <div style="font-weight:700;color:#ffffff">Bienvenido</div>
+        <div style="font-size:13px;color:#e8efff">Haz clic para ver porque deberias escogernos</div>
+      </div>
+    </div>
+    <div style="margin-top:14px">
+      <div class="carousel" id="miniCarousel">
+        <div class="slides" id="slides">
+
+          <div class="slide" style="background:linear-gradient(180deg,#b30033,transparent);border-radius:10px">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=2" alt="Imagen 2">
+            <div>
+              <strong>Rápido</strong>
+              <div style="font-size:13px;color:#ffffff">Te atenderemos rápido</div>
+            </div>
+          </div>
+          <div class="slide" style="background:linear-gradient(180deg,#b30033,transparent);border-radius:10px">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=3" alt="Imagen 3">
+            <div>
+              <strong>Accessible</strong>
+              <div style="font-size:13px;color:#ffffff">Nos concentramos en ayudar a todos</div>
+            </div>
+          </div>
+        </div>
+        <div class="controls">
+          <div class="circle" onclick="prevSlide()" aria-label="Anterior">◀</div>
+          <div class="circle" onclick="nextSlide()" aria-label="Siguiente">▶</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="features" style="background-color:#faead7">
+  <div style="padding:12px 32px;">
+    <h2 style="margin:0 0 12px;color:#001237">Servicios</h2>
+    <p style="margin:0 0 8px;color:#001237">Que ofrece nuestra empresa</p>
+  </div>
+  <div class="features">
+    <article class="card">
+      <h3>Nustros logros</h3>
+      <p>Como una empresa con experiencia hemos ayudado a mucha gente.</p>
+    </article>
+    <article class="card">
+      <h3>Zonas que ayudamos</h3>
+      <p>Entre nuestros logros han sido ayudar a mas de 10 zonas del país con personas analfabetas.</p>
+    </article>
+    <article class="card">
+      <h3>Productos</h3>
+      <p>Tu también nos puede ayudar a auxiliar a mas personas con tu compra .</p>
+    </article>
+    <article class="card">
+      <h3>Campañas </h3>
+      <p>Unete a nosotros y acompañanos a ser parte de la solución.</p>
+    </article>
+  </div>
+</section>
+
+
+
+
+<section id="ejemplos" style="padding:18px 32px;color:#001442;background-color:#faead7;">
+  <h2>Nuestro objetivo</h2>
+  <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px">
+    <div class="card" style="flex:1 1 260px">
+      <h3>Misión</h3>
+      <p>EduFuturo tiene como misión empoderar a comunidades vulnerables mediante el acceso a una educación de calidad, inclusiva y accesible, que promueva el desarrollo personal y profesional.</p>
+    </div>
+    <div class="card" style="flex:1 1 260px">
+      <h3>Visión</h3>
+      <p>Que en el futuro los niños, niñas y adolescentes  de la clase baja  tengan una educación digna y  calidad y asegurar  que se terminen la educación</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer id="contacto">
+  <div class="contact">
+    <div>
+      <h2>Contactanos</h2>
+      <p style="color:#001837">Rellena y pulsa enviar — para participar con nosotros</p>
+
+
+
+
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <label for="name">Nombre</label>
+        <input id="name" name="name" required placeholder="Tu nombre" />
+
+
+
+
+        <label for="email">Correo</label>
+        <input id="email" name="email" type="email" required placeholder="tu@ejemplo.com" />
+
+
+
+
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Escribe tu mensaje..."></textarea>
+
+
+
+
+        <div style="display:flex;gap:10px;margin-top:6px">
+          <button type="submit" class="btn">Enviar</button>
+          <button type="reset" class="btn secondary">Limpiar</button>
+        </div>
+
+
+
+
+        <div id="status" style="margin-top:12px;min-height:28px"></div>
+      </form>
+    </div>
+
+
+
+
+    <div style="position:relative">
+      <div class="card" style="padding:18px">
+        <h3>Resumen</h3>
+        <p style="color:#001a55">Donde nos puedes contactar</p>
+        <ul style="color:#001a55;font-size:14px">
+          <li>5598362873</li>
+          <li>Horario:9:00am-4:00pm</li>
+          <li>Lugar:PFA</li>
+        </ul>
+      </div>
+
+
+
+
+      <div style="margin-top:14px;padding:12px;background:linear-gradient(90deg,#ffa8a8,transparent);border-radius:12px">
+        <strong>¿Quieres ver mas de nuestro trabajo?</strong>
+        <div style="font-size:13px;color:#001545;margin-top:8px">Visitanos en redes sociales:Centro_EduFuturo</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+  </main>  <script>
+    // --- Tema simple ---
+    function toggleTheme(){
+      document.body.classList.toggle('alt-theme');
+      if(document.body.classList.contains('alt-theme')){
+        document.documentElement.style.setProperty('--accent','#ff7a59');
+      }else{
+        document.documentElement.style.setProperty('--accent','#6C63FF');
+      }
+    }
+
+
+
+
+    // --- Carrusel ---
+    const slidesEl = document.getElementById('slides');
+    let index = 0;
+    const total = slidesEl.children.length;
+
+
+
+
+    function showIndex(i){
+      index = (i+total)%total;
+      slidesEl.style.transform = `translateX(${-index*100}%)`;
+    }
+    function nextSlide(){ showIndex(index+1); }
+    function prevSlide(){ showIndex(index-1); }
+
+
+
+
+    // autocycle every 5s (pauses on hover)
+    let cycle = setInterval(nextSlide,5000);
+    document.getElementById('miniCarousel').addEventListener('mouseenter',()=>clearInterval(cycle));
+    document.getElementById('miniCarousel').addEventListener('mouseleave',()=>cycle=setInterval(nextSlide,5000));
+
+
+
+
+    // Keyboard support when carousel is focused
+    document.getElementById('miniCarousel').setAttribute('tabindex','0');
+    document.getElementById('miniCarousel').addEventListener('keydown', (e)=>{
+      if(e.key === 'ArrowRight') nextSlide();
+      if(e.key === 'ArrowLeft') prevSlide();
+    });
+
+
+
+
+    // --- Formulario (simulado) ---
+    const statusEl = document.getElementById('status');
+
+
+
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+
+
+
+      // pequeña validación
+      if(!name || !email || !message){
+        statusEl.innerHTML = '<div style="color:#ffb4b4">Completa todos los campos.</div>';
+        return;
+      }
+      if(!/^\S+@\S+\.\S+$/.test(email)){
+        statusEl.innerHTML = '<div style="color:#ffb4b4">Correo inválido.</div>';
+        return;
+      }
+
+
+
+
+     
+
+      // UI: mostrar envío (simulado)
+      statusEl.innerHTML = '<div style="display:flex;gap:10px;align-items:center"><div class="sent">Enviando...</div><div style="color:#bcd0ea">  Enviando tu mensaje.</div></div>';
+
+
+
+
+      // Simula retardo y muestra confirmación
+      setTimeout(()=>{
+        statusEl.innerHTML = '<div style="color:#d4ffd9;background:linear-gradient(90deg,#072b1a,transparent);padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.02)">¡Mensaje enviado! Gracias, ' + escapeHtml(name) + '.</div>';
+        document.getElementById('contactForm').reset();
+      },1200);
+    }
+
+
+
+
+    function escapeHtml(text){
+      return text.replace(/[&<>\"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+
+
+
+
+    // proveer una pequeña animación inicial
+    window.addEventListener('load', ()=>{ document.body.style.opacity = 1; showIndex(0); });
+  </script></body>
+</html>
+
+
+
+
+
+

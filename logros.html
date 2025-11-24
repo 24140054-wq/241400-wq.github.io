@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuestros Logros</title>
+  <style>
+    /* Reset sencillo */
+    * { margin:0; padding:0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333333; background: #F7F2F1; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Navbar */
+    header { background: #e95757; padding: 20px; position: sticky; top:0; z-index:100; }
+    nav { display: flex; justify-content: space-between; align-items: center; max-width:1200px; margin:0 auto; }
+    .logo-container { display: flex; align-items: center; gap:10px; }
+    nav .logo { color: #F7F2F1; font-size: 1.5rem; font-weight: bold; }
+    nav ul { list-style:none; display: flex; gap: 20px; }
+    nav ul li a { color: #F7F2F1; padding: 8px 12px; transition:  0.3s, transform 0.3s; }
+    nav ul li a:hover { background: #e95757; transform: scale(1.05); border-radius:4px; }
+
+    /* Ajuste del logo imagen */
+    .logo-container img {
+     
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+    
+
+    /* Hero / Título principal */
+    .hero { text-align: center; padding: 60px 20px; background: #e95757; color: #F7F2F1; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.2rem; }
+
+    /* Section “Quiénes somos” */
+    .who { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+    .who h2 { font-size: 2rem; color: #B9443E; margin-bottom: 15px; }
+    .who p { font-size: 1rem; margin-bottom: 20px; }
+
+    /* Imagen carrusel */
+    .carousel { max-width: 800px; margin: 40px auto; padding:0 20px; position: relative; overflow: hidden; border-radius: 10px; }
+    .carousel img { width:100%; height:auto; display:none; border-radius:10px; }
+    .carousel img.active { display:block; }
+
+    /* Subtitulo “Logros” */
+    .achievements-intro { max-width: 1200px; margin: 0px auto; padding: 0 20px; text-align: center; }
+    .achievements-intro h2 { font-size: 2rem; color: #B9443E; margin-bottom:10px; }
+    .achievements-intro p { font-size:1.1rem; }
+
+    /* Cartas de logros */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 20px; max-width:1200px; margin:40px auto; padding: 0 20px; }
+    .card { background: #FFFFFF; border-radius:8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+    .card img { width:100%; height:auto; }
+    .card .card-content { padding: 20px; }
+    .card .card-content h3 { font-size: 1.5rem; color: #B9443E; margin-bottom:10px; }
+    .card .card-content p { font-size:1rem; }
+
+    /* Otro párrafo general */
+    .general-text { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+    .general-text p { font-size:1rem; margin-bottom:20px; }
+
+    /* Imágenes finales/galería */
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 15px; max-width:1200px; margin:40px auto; padding:0 20px; }
+    .gallery img { width:100%; height:200px; border-radius:8px; }
+
+    /* Footer */
+    footer { background: #e95757; color: #F7F2F1; text-align:center; padding:20px 0; margin-top:60px; }
+    footer p { font-size:0.9rem; }
+
+    /* Botón de acción */
+    .btn { display:inline-block; background: #FF7A70; color: #F7F2F1; padding: 12px 24px; border:none; border-radius:4px; cursor:pointer; transition: background 0.3s, transform 0.3s; }
+    .btn:hover { background: #D35C55; transform: scale(1.05); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo-container">
+        <!-- 🟢 Aquí agregas tu logo (usa el archivo local o una URL) -->
+        <img src="C:\Users\Arlette\Pictures\Screenshots\Captura de pantalla 2025-10-26 150519.png" alt="Logo EDUfuturo">
+        <div class="logo">EDUfuturo</div>
+      </div>
+      <ul>
+         <a href=" index_original.html">Inicio</a>
+            <a href="zonas.html">Zonas</a>
+            <a href="productos.html">Tienda</a>
+            <a href="logros.html">Logros</a>
+            <a href="campañas.html">Campañas</a>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Nuestros Logros</h1>
+    <p>Comprometidos con la educación y la erradicación de la pobreza</p>
+  </section>
+
+  <section class="who">
+    <h2>Proyecto</h2>
+    <p>El proyecto está alineado con dos objetivos prioritarios de la Agenda 2030 (No Pobreza y Educación de calidad), lo que genera alto valor social y atractivo para financiamiento o apoyo institucional.
+Facilita el acceso a información, recursos educativos y apoyo a comunidades vulnerables, lo que puede reducir brechas digitales.</p>
+  </section>
+
+  <section class="carousel">
+    <!-- Carrusel de imágenes -->
+    <img src="https://www.unicef.org/mexico/sites/unicef.org.mexico/files/styles/open_graph_image/public/Mauricio%20ramos%20%2813%29.jpg.jpeg?itok=aUF6KMCh" alt="Escuela con pocos recursos" class="active">
+    <img src="https://www.educacionfutura.org/wp-content/uploads/2015/04/pobreza.jpg" alt="Educación rural">
+    <img src="https://revistaedurama.com/wp-content/uploads/2023/04/La-responsabilidad-social-de-la-educacion_hacia-la-formacion-de-un-desarrollo-sostenible_Mesa-de-trabajo-1-678x381.jpg" alt="Clases sustentables">
+  </section>
+
+  <section class="achievements-intro">
+    <h2>Orgullosamente trabajadores</h2>
+    <p>En EDUfuturo, nos enorgullece haber avanzado significativamente en nuestra misión de contribuir al cumplimiento de los Objetivos de Desarrollo Sostenible (ODS) de la Agenda 2030. A través de nuestras acciones, buscamos impactar positivamente en las comunidades y sectores más vulnerables, con especial enfoque en la erradicación de la pobreza y el acceso universal a una educación de calidad.</p>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <img src="https://movimientoantorchista.org.mx/uploads/images/image_750x422_6205f287c9fd1.jpg" alt="Logro 1">
+      <div class="card-content">
+        <h3>Educación de calidad</h3>
+        <p>EDUfuturo ha desarrollado programas educativos que benefician tanto a niños como a adultos. A través de becas, talleres de alfabetización digital y programas de formación técnica, la empresa ha facilitado el acceso a una educación inclusiva y equitativa. En colaboración con instituciones académicas, se han creado espacios de aprendizaje comunitario que promueven la innovación, la igualdad de oportunidades y el desarrollo de habilidades para el futuro. Estas iniciativas han impactado positivamente a 200000 beneficiarios, contribuyendo a romper el ciclo de pobreza mediante la educación.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://revistaedurama.com/wp-content/uploads/2023/04/La-responsabilidad-social-de-la-educacion_hacia-la-formacion-de-un-desarrollo-sostenible_Mesa-de-trabajo-1-678x381.jpg" alt="Logro 2">
+      <div class="card-content">
+        <h3>Comprometida con el desarrollo sostenible y la educación inclusiva</h3>
+        <p>EDUfuturo ha puesto en marcha su programa “Educar Reciclando”, una iniciativa que busca brindar apoyo escolar a niños y niñas de comunidades vulnerables mediante la entrega de útiles escolares elaborados con materiales reciclados. Esta acción no solo promueve el acceso a la educación, sino que también fomenta la conciencia ambiental y la economía circular.
+A través del trabajo conjunto con escuelas locales y organizaciones comunitarias, la empresa ha logrado recolectar toneladas de papel, plástico y cartón, materiales que fueron transformados en cuadernos, estuches, mochilas y lápices ecológicos.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://zetatijuana.com/wp-content/uploads/2025/10/pobreza-olvera.jpg" alt="Logro 3">
+      <div class="card-content">
+        <h3>Erradicacion de la pobreza</h3>
+        <p>La empresa EDUfuturo ha logrado reducir la pobreza en distintas comunidades al implementar programas como el proyecto comunitario esperanza global con despensas llenas de productos de canastas básicas a un precio de 15 pesos distribuyéndolas en todas las comunidades visitadas, además en colaboración con otras organizaciones se han proporcionado más de 54012 empleos dignos con jornadas de medio tiempo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="general-text">
+    <p>Los esfuerzos de EDUfuturo reflejan una visión clara de responsabilidad social y sostenibilidad. Cada acción emprendida no solo responde a los objetivos de la Agenda 2030, sino que también impulsa una transformación real en las comunidades donde opera. Con un enfoque basado en la cooperación y la innovación social, la empresa continúa trabajando para ampliar su alcance y generar un impacto duradero en la erradicación de la pobreza y el acceso universal a la educación.</p>
+  </section>
+
+  <section class="gallery">
+    <img src="https://www.educacionfutura.org/wp-content/uploads/2015/04/pobreza.jpg" alt="Galería A">
+    <img src="https://www.diarioelindependiente.mx/noticias/2021/02/original/16128573364d44c.jpg" alt="Galería B">
+    <img src="https://www.24morelos.com/content/images/wp-content/uploads/2020/05/escuela-clases.jpg" alt="Galería C">
+  </section>
+
+  <footer>
+    <p>© 2025 EDUfuturo | Todos los derechos reservados</p>
+  </footer>
+
+  <!-- 🟢 Script del carrusel -->
+  <script>
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel img');
+    setInterval(() => {
+      images[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % images.length;
+      images[currentIndex].classList.add('active');
+    }, 3000); // cambia cada 3 segundos
+  </script>
+
+</body>
+</html>
